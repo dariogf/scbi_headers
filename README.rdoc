@@ -1,0 +1,114 @@
+= scbi_headers
+
+* http://www.scbi.uma.es/downloads
+
+== DESCRIPTION:
+
+scbi_headers is a gem that provides consistent text headers for command line applications.
+
+== FEATURES/PROBLEMS:
+
+Can show the following information
+
+* Corporate infomation
+* Application name
+* Version
+* Description
+* Authors
+* Articles to be referenced
+
+== SYNOPSIS:
+
+This sample code:
+
+  require 'scbi_headers'
+
+
+  @header = ScbiHeader.new('SAMPLE_PROGRAM','101')
+
+  @header.description="A long description for this program. It may include a few lines of text. In such cases, a word based wrap will be applied."
+
+  @header.copyright='2012'
+
+  @header.authors<< "Dario Guerrero"
+  @header.authors<< "Other"
+
+  @header.articles<< "Article one: with one description line"
+  @header.articles<< "Article two: with one description line"
+  
+  # The main title can also be changed:
+  
+  @header.title=[]
+  @header.title << "SuperComputing and BioInformatics - SCBI"
+  @header.title << "University of Malaga - Spain"
+  @header.title << "http://www.scbi.uma.es"  
+
+  # To output the header
+  puts @header
+
+
+Will produce the following output:
+
+  #==============================================================================#
+  #                   SuperComputing and BioInformatics - SCBI                   #
+  #                         University of Malaga - Spain                         #
+  #                            http://www.scbi.uma.es                            #
+  #------------------------------------------------------------------------------#
+  #                                                                              #
+  # SAMPLE_PROGRAM - version: 101 - (c) 2012                                     #
+  #                                                                              #
+  #------------------------------------------------------------------------------#
+  #                                                                              #
+  #  A long description for this program. It may include a few lines of text. In #
+  #  such cases, a word based wrap will be applied.                              #
+  #                                                                              #
+  #------------------------------------------------------------------------------#
+  #                                                                              #
+  # Authors                                                                      #
+  #       -Dario Guerrero                                                        #
+  #       -Other                                                                 #
+  #------------------------------------------------------------------------------#
+  #                                                                              #
+  # **NOTE: If you find this program useful, please cite the following articles: #
+  #                                                                              #
+  #       -Article one: with one description line                                #
+  #       -Article two: with one description line                                #
+  #==============================================================================#  
+  
+
+
+== REQUIREMENTS:
+
+None
+
+== INSTALL:
+
+Common install with gem install:
+
+  gem install scbi_headers
+
+== LICENSE:
+
+(The MIT License)
+
+Copyright (c) 2012 Dario Guerrero
+
+Permission is hereby granted, free of charge, to any person obtaining
+a copy of this software and associated documentation files (the
+'Software'), to deal in the Software without restriction, including
+without limitation the rights to use, copy, modify, merge, publish,
+distribute, sublicense, and/or sell copies of the Software, and to
+permit persons to whom the Software is furnished to do so, subject to
+the following conditions:
+
+The above copyright notice and this permission notice shall be
+included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
+CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
+TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+

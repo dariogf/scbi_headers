@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+
+  <title>File: README.rdoc [RDoc Documentation]</title>
+
+  <link type="text/css" media="screen" href="./rdoc.css" rel="stylesheet" />
+
+  <script src="./js/jquery.js" type="text/javascript"
+    charset="utf-8"></script>
+  <script src="./js/thickbox-compressed.js" type="text/javascript"
+    charset="utf-8"></script>
+  <script src="./js/quicksearch.js" type="text/javascript"
+    charset="utf-8"></script>
+  <script src="./js/darkfish.js" type="text/javascript"
+    charset="utf-8"></script>
+</head>
+
+<body class="file">
+  <div id="metadata">
+    <div id="home-metadata">
+      <div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="./index.html">Home</a>
+          <a href="./index.html#classes">Classes</a>
+          <a href="./index.html#methods">Methods</a>
+        </h3>
+      </div>
+    </div>
+
+    <div id="project-metadata">
+      
+      
+      <div id="fileindex-section" class="section project-section">
+        <h3 class="section-header">Files</h3>
+        <ul>
+        
+          <li class="file"><a href="./README_rdoc.html">README.rdoc</a></li>
+        
+        </ul>
+      </div>
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class Index
+          <span class="search-toggle"><img src="./images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <ul class="link-list">
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <div id="documentation">
+    
+<h1>scbi_headers</h1>
+<ul><li>
+<p><a href="http://www.scbi.uma.es/downloads">www.scbi.uma.es/downloads</a></p>
+</li></ul>
+
+<h2>DESCRIPTION:</h2>
+
+<p>scbi_headers is a gem that provides consistent text headers for command
+line applications.</p>
+
+<h2>FEATURES/PROBLEMS:</h2>
+
+<p>Can show the following information</p>
+<ul><li>
+<p>Corporate infomation</p>
+</li><li>
+<p>Application name</p>
+</li><li>
+<p>Version</p>
+</li><li>
+<p>Description</p>
+</li><li>
+<p>Authors</p>
+</li><li>
+<p>Articles to be referenced</p>
+</li></ul>
+
+<h2>SYNOPSIS:</h2>
+
+<p>This sample code:</p>
+
+<pre>require 'scbi_headers'
+
+@header = ScbiHeader.new('SAMPLE_PROGRAM','101')
+
+@header.description=&quot;A long description for this program. It may include a few lines of text. In such cases, a word based wrap will be applied.&quot;
+
+@header.copyright='2012'
+
+@header.authors&lt;&lt; &quot;Dario Guerrero&quot;
+@header.authors&lt;&lt; &quot;Other&quot;
+
+@header.articles&lt;&lt; &quot;Article one: with one description line&quot;
+@header.articles&lt;&lt; &quot;Article two: with one description line&quot;
+
+# The main title can also be changed:
+
+@header.title=[]
+@header.title &lt;&lt; &quot;SuperComputing and BioInformatics - SCBI&quot;
+@header.title &lt;&lt; &quot;University of Malaga - Spain&quot;
+@header.title &lt;&lt; &quot;http://www.scbi.uma.es&quot;  
+
+# To output the header
+puts @header</pre>
+
+<p>Will produce the following output:</p>
+
+<pre>#==============================================================================#
+#                   SuperComputing and BioInformatics - SCBI                   #
+#                         University of Malaga - Spain                         #
+#                            http://www.scbi.uma.es                            #
+#------------------------------------------------------------------------------#
+#                                                                              #
+# SAMPLE_PROGRAM - version: 101 - (c) 2012                                     #
+#                                                                              #
+#------------------------------------------------------------------------------#
+#                                                                              #
+#  A long description for this program. It may include a few lines of text. In #
+#  such cases, a word based wrap will be applied.                              #
+#                                                                              #
+#------------------------------------------------------------------------------#
+#                                                                              #
+# Authors                                                                      #
+#       -Dario Guerrero                                                        #
+#       -Other                                                                 #
+#------------------------------------------------------------------------------#
+#                                                                              #
+# **NOTE: If you find this program useful, please cite the following articles: #
+#                                                                              #
+#       -Article one: with one description line                                #
+#       -Article two: with one description line                                #
+#==============================================================================#</pre>
+
+<h2>REQUIREMENTS:</h2>
+
+<p>None</p>
+
+<h2>INSTALL:</h2>
+
+<p>Common install with gem install:</p>
+
+<pre>gem install scbi_headers</pre>
+
+<h2>LICENSE:</h2>
+
+<p>(The MIT License)</p>
+
+<p>Copyright © 2012 Dario Guerrero</p>
+
+<p>Permission is hereby granted, free of charge, to any person obtaining a
+copy of this software and associated documentation files (the ‘Software’),
+to deal in the Software without restriction, including without limitation
+the rights to use, copy, modify, merge, publish, distribute, sublicense,
+and/or sell copies of the Software, and to permit persons to whom the
+Software is furnished to do so, subject to the following conditions:</p>
+
+<p>The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.</p>
+
+<p>THE SOFTWARE IS PROVIDED ‘AS IS’, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
+DEALINGS IN THE SOFTWARE.</p>
+
+  </div>
+
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+</body>
+</html>
+
